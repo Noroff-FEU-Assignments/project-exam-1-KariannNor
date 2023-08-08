@@ -9,7 +9,7 @@
 .bar {
   height: 50px;
   width: 10px;
-  background-color: var(--primary-color-1);
+  background-color: var(--primary-color-2);
   margin: 0 5px;
   animation: loader 1.5s ease-in-out infinite;
 }
