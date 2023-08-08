@@ -7,7 +7,7 @@ export function stripPTags(html) {
 
 
 export async function fetchBlogPosts(startIndex = 0, numPosts = -1) {
-  let apiUrl = 'http://roadtrippin-api/wp-json/wp/v2/posts?_embed';
+  let apiUrl = 'https://knorheim.no/roadtrippin-api/wp-json/wp/v2/posts?_embed';
 
   if (numPosts > 0) {
     apiUrl += `&per_page=${numPosts}&offset=${startIndex}`;

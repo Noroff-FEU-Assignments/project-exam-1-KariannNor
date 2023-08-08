@@ -16,7 +16,7 @@ async function fetchAndDisplayArticle() {
     return;
   }
 
-  const apiUrl = `http://roadtrippin-api/wp-json/wp/v2/posts/${postId}?_embed`;
+  const apiUrl = 'https://knorheim.no/roadtrippin-api/wp-json/wp/v2/posts/${postId}?_embed';
 
   try {
     const response = await fetch(apiUrl);
