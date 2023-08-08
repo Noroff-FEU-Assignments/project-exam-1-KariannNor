@@ -1,5 +1,6 @@
 @import url("/css/slider.css");
 @import url("/css/posts.css");
+@import url("/css/loader.css");
 
 :root {
   --primary-color-1: #343434;

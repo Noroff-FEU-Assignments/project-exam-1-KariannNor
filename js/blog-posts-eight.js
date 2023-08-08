@@ -35,9 +35,6 @@ async function displayNextEightBlogPosts() {
   }
 }
 
-
 displayNextEightBlogPosts();
-
-
 
 
