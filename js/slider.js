@@ -4,7 +4,7 @@ let autoPlayInterval;
 
 
 async function fetchAndDisplayBlogPosts() {
-  const apiUrl = 'http://roadtrippin-api/wp-json/wp/v2/posts?_embed&per_page=3';
+  const apiUrl = 'https://knorheim.no/roadtrippin-api/wp-json/wp/v2/posts?_embed&per_page=3';
 
   try {
     const response = await fetch(apiUrl);
