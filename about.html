@@ -29,22 +29,27 @@
       src="https://kit.fontawesome.com/d518c97c1e.js"
       crossorigin="anonymous"
     ></script>
-   
-<!-- Hotjar Tracking Code for Roadtrippin' USA -->
-<script>
-  (function(h,o,t,j,a,r){
-      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-      h._hjSettings={hjid:3606213,hjsv:6};
-      a=o.getElementsByTagName('head')[0];
-      r=o.createElement('script');r.async=1;
-      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-      a.appendChild(r);
-  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-</script>
 
+    <!-- Hotjar Tracking Code for Roadtrippin' USA -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 3606213, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+
+    <!-- <script type="module" src="js/slider.js"></script> -->
     <script type="module" src="js/blog-posts.js" defer></script>
     <script type="module" src="js/slider.js" defer></script>
-    <script type="module" src="js/blog-posts-eight.js" defer></script>
   </head>
   <body class="home">
     <a class="skip-to-content sr-only" href="#main">Skip to content</a>
@@ -65,7 +70,7 @@
           data-visible="false"
           class="primary-navigation flex underline"
         >
-          <li><a href="index.html" id="active">Home</a></li>
+          <li><a href="index.html">Home</a></li>
 
           <li>
             <a href="destinations.html" class="no-underline">Destinations +</a>
@@ -89,89 +94,28 @@
             </ul>
           </li>
 
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" id="active">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
-      <!-- Intro -->
-      <div aria-labelledby="intro" class="intro-container">
-        <div class="wrapper-intro">
-          <h1 class="subheading">Roadtrippin' USA - travel blog:</h1>
-          <h2 class="section-heading">
-            Embrace the Journey of Exploring the USA
-          </h2>
-          <button class="cta-btn">Read all about it!</button>
-        </div>
-      </div>
-
       <!-- spinner for page loading -->
       <div class="loader">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-        <div class="bar"></div>      
+        <div class="bar"></div>
       </div>
 
-      <!-- Section blog-post 1 - api-fetch -->
-      <section aria-labelledby="blog-post-section1">
-        <h2 class="section-heading">Editors pick</h2>
-    
-        <div class="blog-posts-container"></div>
-      </section>
-
-      <!-- feature article 1 -->
-      <div aria-labelledby="feature-article" class="feature-container">
-        <div class="feature-img">
-          <img src="/img/horseshoebend_650x280.jpg" alt="Newest blog article" class="feature"/></a>
-        </div>
-        <div class="feature-title">
-          <h2 class="section-heading white">Horseshoe Bend and the Grand Canyon</h2>
-          <button class="cta-btn alt">Read all about it!</button>
-        </div>
-      </div>
-
-      <!-- Section - carousel -->
-      <section aria-labelledby="slider">
-        <div class="slide-container">
-          <i class="fa-solid fa-circle-chevron-left" id="slide-left"></i>
-
-          <div class="latest-posts" id="slider"></div>
-          <i class="fa-solid fa-circle-chevron-right" id="slide-right"></i>
-        </div>
-      </section>
-
-         <!-- Section blog-post 2 - api-fetch -->
-      <section aria-labelledby="blog-post-section2">
-        <h2 class="section-heading">Discover our latest trips</h2>
-        <div class="blog-posts-eight"></div>
-      </section>
-
-
-       <!-- feature article 2 -->
-      <div aria-labelledby="feature-article" class="feature-container">
-        <div class="feature-img">
-          <img src="/img/horseshoebend_650x280.jpg" alt="Newest blog article" class="feature"/></a>
-        </div>
-        <div class="feature-title">
-          <h2 class="section-heading white">Horseshoe Bend and the Grand Canyon</h2>
-          <button class="cta-btn alt">Read all about it!</button>
-        </div>
-      </div>
+      <h1 id="article-title"></h1>
+      <img src="" id="article-image" alt="" />
+      <div id="article-excerpt"></div>
     </main>
 
     <footer>
-      <div class="footer-info">
-        <p class="h3">Roadtrippin' USA</p>
-        <p class="p1">1002 Demo Ln.<br>
-          12345 Virginia Beach<br> 
-          Virginia - USA
-        </p>     
-        <p class="p1">&copy; 2023 Kariann Norheim // Roadtrippin' USA. All rights reserved.</p>
-      </div>
       <!-- Footer content goes here -->
     </footer>
   </body>
