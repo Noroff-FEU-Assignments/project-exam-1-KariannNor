@@ -1,0 +1,98 @@
+.slide-container i {
+  font-size: 20px;
+  margin: 0 10px;
+  color: #343434;
+  cursor: pointer;
+}
+
+.slide-container {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto -50px auto;
+}
+
+#slider {
+  margin: 20px 10px;
+}
+
+.img-thumb {
+  margin-bottom: 15px;
+  object-fit: cover;
+  max-height: 240px;
+}
+
+/* .title-thumb {
+  font-family: "Lora", serif;
+  font-weight: 500;
+  font-size: var(--font-size-medium);
+  margin-top: -5px;
+  color: var(--primary-color-1);
+}
+.title-thumb:hover {
+  text-decoration: underline;
+} */
+
+/* lage link type som er lik pluggene */
+
+.title-thumb {
+  font-family: "Lora", serif;
+  font-weight: 300;
+  font-size: var(--font-size-medium);
+  text-decoration: none;
+  color: var(--primary-color-1);
+  position: relative;
+  margin-top: -5px;
+}
+
+.title-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 90%;
+  border-bottom: 2px solid var(--primary-color-1);
+}
+
+.title-thumb:hover::after {
+  border-bottom-color: var(--primary-color-3);
+}
+
+.latest-posts {
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  cursor: pointer;
+}
+
+.latest-posts::-webkit-scrollbar {
+  height: 12px;
+  width: 1px;
+  background: #ededed;
+}
+
+.latest-posts::-webkit-scrollbar-track {
+  --webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.latest-posts::-webkit-scrollbar-thumb {
+  background-color: #343434;
+  border-radius: 10px;
+}
+
+.latest-posts .thumbnail {
+  flex: 0 0 auto;
+  object-fit: cover;
+  cursor: pointer;
+  overflow: hidden;
+  transform: scale(0.97);
+  transition: all 0.3s;
+}
+
+.latest-posts .thumbnail:hover {
+  transform: scale(1);
+}

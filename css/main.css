@@ -1,0 +1,288 @@
+@import url("/css/slider.css");
+@import url("/css/posts.css");
+
+:root {
+  --primary-color-1: #343434;
+  --primary-color-2: #c1edf1;
+  --primary-color-3: #35f3e8;
+  --primary-color-4: #ededed;
+  --font-size-small: 16px;
+  --font-size-medium: 25px;
+  --font-size-large: 55px;
+  --body-text: 20px;
+  --body-text-small: 18px;
+  --stamp-text: 12px;
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  font-family: "Lora", serif;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 7%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  display: flex;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: var(--primary-color-4);
+}
+
+.footer-info {
+  padding: 50px;
+
+  max-width: 1500px;
+  height: 10rem;
+}
+
+.footer-info p {
+  font-weight: 500;
+}
+
+.footer-info .p1 {
+  font-weight: 100;
+}
+
+main {
+  margin-top: 5%;
+}
+
+section {
+  padding: 0px 50px 50px 50px;
+  margin: 20px auto;
+  max-width: 1500px;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  font-weight: light;
+  font-size: var(--font-size-large);
+}
+
+h2 {
+  font-family: "Lora", serif;
+  font-weight: 300;
+  font-size: var(--font-size-medium);
+}
+
+h3 {
+  font-family: "Lora", serif;
+  font-weight: 300;
+  font-size: var(--font-size-small);
+}
+
+p {
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+  font-size: var(--font-size-small);
+}
+
+.subheading {
+  font-family: "Inter", sans-serif;
+  font-size: var(--font-size-small);
+  font-weight: 100;
+  margin: 50px 0 -20px 0;
+}
+
+.section-heading {
+  font-family: "Lora", serif;
+  font-weight: 100;
+  font-size: var(--font-size-large);
+  color: var(--primary-color-1);
+}
+
+.white {
+  color: var(--primary-color-4);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+.skip-to-content:focus {
+  position: relative;
+  width: max-content;
+  height: auto;
+  clip: 0;
+  background: var(--primary-color-1);
+  color: var(--primary-color-4);
+}
+
+/* Navbar */
+
+.logo {
+  max-width: 15vw;
+}
+
+label .fa-bars {
+  color: var(--primary-color-1);
+  font-size: var(--font-size-medium);
+  cursor: pointer;
+  display: none;
+}
+
+#menu-bar {
+  display: none;
+}
+
+header nav ul {
+  list-style: none;
+}
+
+header nav ul li {
+  position: relative;
+  float: left;
+}
+
+header nav ul li a {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  font-size: var(--font-size-small);
+  padding: 20px;
+  color: var(--primary-color-1);
+  display: block;
+}
+
+header nav ul li a:focus-within > ul,
+header nav ul li:hover > ul {
+  display: initial;
+}
+
+header nav ul li ul li {
+  width: 100%;
+  border-top: 1px solid var(--primary-color-2);
+}
+
+header nav ul li a:hover {
+  border-color: var(--primary-color-1);
+  border-bottom: 1px solid var(--primary-color-1);
+  background-color: rgba(193, 237, 241, 0.2);
+}
+
+.subnav {
+  position: absolute;
+  left: 0;
+  min-width: 150px;
+  padding: 0;
+  margin-top: -10px;
+  display: none;
+  background: white;
+}
+
+/* buttons */
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #443ffc;
+  outline-offset: 3px;
+}
+
+.cta-btn {
+  width: 200px;
+  height: 50px;
+  background-color: var(--primary-color-1);
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-size: var(--font-size-small);
+  font-weight: 300;
+  box-shadow: 5px 5px var(--primary-color-3);
+  border: none;
+  transform: scale(0.97);
+  transition: all 0.3s;
+}
+
+.alt {
+  background-color: var(--primary-color-4);
+  color: var(--primary-color-1);
+  margin-bottom: 50px;
+}
+
+button:hover {
+  box-shadow: 10px 10px var(--primary-color-3);
+  transform: scale(1);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+  header {
+    padding: 20px;
+  }
+  label .fa-bars {
+    display: initial;
+  }
+  .logo {
+    max-width: 25vw;
+  }
+  header nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid var(--primary-color-2);
+    display: none;
+  }
+
+  header nav ul li {
+    width: 100%;
+  }
+
+  header nav ul li ul {
+    position: relative;
+    width: 100%;
+  }
+
+  .subnav {
+    position: relative;
+    background: var(--primary-color-4);
+    width: 100%;
+    left: 0;
+  }
+
+  .subnav li {
+    width: 100%;
+  }
+
+  #menu-bar:checked ~ nav {
+    display: initial;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .logo {
+    max-width: 35vw;
+  }
+  header {
+    padding: 20px;
+  }
+}
