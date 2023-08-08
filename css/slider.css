@@ -23,19 +23,6 @@
   max-height: 240px;
 }
 
-/* .title-thumb {
-  font-family: "Lora", serif;
-  font-weight: 500;
-  font-size: var(--font-size-medium);
-  margin-top: -5px;
-  color: var(--primary-color-1);
-}
-.title-thumb:hover {
-  text-decoration: underline;
-} */
-
-/* lage link type som er lik pluggene */
-
 .title-thumb {
   font-family: "Lora", serif;
   font-weight: 300;

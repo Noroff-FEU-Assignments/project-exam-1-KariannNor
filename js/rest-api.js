@@ -1,11 +1,11 @@
-// remove <p> tags
+
 export function stripPTags(html) {
   const tempDiv = document.createElement('div');
   tempDiv.innerHTML = html;
   return tempDiv.textContent || tempDiv.innerText || '';
 }
 
-// fetch data from the API and display the blog posts
+
 export async function fetchBlogPosts(startIndex = 0, numPosts = -1) {
   let apiUrl = 'http://roadtrippin-api/wp-json/wp/v2/posts?_embed';
 

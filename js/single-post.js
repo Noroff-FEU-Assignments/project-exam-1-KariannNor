@@ -5,13 +5,13 @@
   return tempDiv.textContent || tempDiv.innerText || '';
 }
 
-// Function to fetch the article data from the API and display it on the page
+// Not finished - needs work
 async function fetchAndDisplayArticle() {
   const params = new URLSearchParams(window.location.search);
-  const postId = params.get('post_id'); // Get the post_id from the URL query parameter
+  const postId = params.get('post_id'); 
 
   if (!postId) {
-    // If the post_id is not provided, handle the error or redirect to another page
+
     console.error('No post_id provided');
     return;
   }
@@ -31,5 +31,4 @@ async function fetchAndDisplayArticle() {
   }
 }
 
-// Call the fetchAndDisplayArticle function to display the individual article
 fetchAndDisplayArticle();
