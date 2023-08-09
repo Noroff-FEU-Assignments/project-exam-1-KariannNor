@@ -26,7 +26,7 @@
 .title-thumb {
   font-family: "Lora", serif;
   font-weight: 300;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-small);
   text-decoration: none;
   color: var(--primary-color-1);
   position: relative;
@@ -37,8 +37,8 @@
   content: "";
   position: absolute;
   left: 0;
-  bottom: 3px;
-  width: 90%;
+  bottom: 1px;
+  width: 70%;
   border-bottom: 2px solid var(--primary-color-1);
 }
 
@@ -57,9 +57,9 @@
 }
 
 .latest-posts::-webkit-scrollbar {
-  height: 12px;
+  height: 7px;
   width: 1px;
-  background: #ededed;
+  background: var(--primary-color-2);
 }
 
 .latest-posts::-webkit-scrollbar-track {
@@ -67,8 +67,8 @@
 }
 
 .latest-posts::-webkit-scrollbar-thumb {
-  background-color: #343434;
-  border-radius: 10px;
+  background-color: var(--primary-color-4);
+  border-radius: 5px;
 }
 
 .latest-posts .thumbnail {
