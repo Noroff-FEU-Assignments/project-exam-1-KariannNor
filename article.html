@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roadtrippin'USA</title>
+    <title>Roadtrippin'USA |</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -48,16 +48,16 @@
     </script>
 
     <!-- JS scripts -->
-    <script type="module" src="js/blog-posts.js" defer></script>
+    <script type="module" src="js/display-all.js" defer></script>
     <script type="module" src="js/slider.js" defer></script>
-    <script type="module" src="js/loader.js" defer></script>
+    <script type="module" src="js/single-post.js" defer></script>
   </head>
   <body class="home">
     <a class="skip-to-content sr-only" href="#main">Skip to content</a>
 
     <header class="primary-header flex">
       <div>
-        <a href="#" aria-label="Homepage"
+        <a href="index.html" aria-label="Homepage"
           ><img src="img/logo.svg" alt="Roadtrippin' USA logo" class="logo"
         /></a>
       </div>
@@ -72,52 +72,75 @@
           class="primary-navigation flex underline"
         >
           <li><a href="index.html">Home</a></li>
-
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li>
             <a href="destinations.html" class="no-underline">Destinations +</a>
             <ul class="subnav">
-              <li><a href="#.html">List of all destinations</a></li>
-              <li><a href="#.html">National Parks</a></li>
-              <li><a href="#.html">Scenic Routes</a></li>
-              <li><a href="#.html">Road trips by State</a></li>
+              <li><a href="destinations.html">List of all destinations</a></li>
+              <li><a href="destinations.html">National Parks</a></li>
+              <li><a href="destinations.html">Scenic Routes</a></li>
+              <li><a href="destinations.html">Road trips by State</a></li>
             </ul>
           </li>
 
           <li>
             <a href="planning.html" class="no-underline">Planning +</a>
             <ul class="subnav">
-              <li><a href="#.html">Packing tips</a></li>
-              <li><a href="#.html">Budgeting</a></li>
-              <li><a href="#.html">Travel with kids and pets</a></li>
-              <li><a href="#.html">Route planning</a></li>
-              <li><a href="#.html">Safety</a></li>
-              <li><a href="#.html">Accommodations</a></li>
+              <li><a href="planning.html">Packing tips</a></li>
+              <li><a href="planning.html">Budgeting</a></li>
+              <li><a href="planning.html">Travel with kids and pets</a></li>
+              <li><a href="planning.html">Route planning</a></li>
+              <li><a href="planning.html">Safety</a></li>
+              <li><a href="planning.html">Accommodations</a></li>
             </ul>
           </li>
-
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
       <!-- spinner for page loading -->
-      <div class="loader">
+      <!-- <div class="loader">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-      </div>
+      </div> -->
+      <!-- js content in here -->
 
-      <h1 id="article-title"></h1>
-      <img src="" id="article-image" alt="" />
-      <div id="article-excerpt"></div>
+      <section class="article">
+        <div class="contact wide">
+          <h1 id="article-title"></h1>
+          <img src="" id="article-image" alt="" />
+          <div id="article-excerpt" class="quote"></div>
+          <div id="article-content"></div>
+        </div>
+      </section>
+
+      <section aria-labelledby="slider">
+        <h3>Popular Posts</h3>
+        <div class="slide-container">
+          <i class="fa-solid fa-circle-chevron-left" id="slide-left"></i>
+          <div class="latest-posts" id="slider"></div>
+          <i class="fa-solid fa-circle-chevron-right" id="slide-right"></i>
+        </div>
+      </section>
     </main>
 
     <footer>
-      <!-- Footer content goes here -->
+      <div class="footer-info">
+        <p class="h3">Roadtrippin' USA</p>
+        <p class="p1">
+          1002 Demo Ln.<br />
+          12345 Virginia Beach<br />
+          Virginia - USA
+        </p>
+        <p class="p1">
+          &copy; 2023 Kariann Norheim // Roadtrippin' USA. All rights reserved.
+        </p>
+      </div>
     </footer>
   </body>
 </html>

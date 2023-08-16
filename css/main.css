@@ -1,12 +1,15 @@
 @import url("/css/slider.css");
 @import url("/css/posts.css");
 @import url("/css/loader.css");
+@import url("/css/contact.css");
+@import url("/css/about.css");
 
 :root {
   --primary-color-1: #343434;
   --primary-color-2: #c1edf1;
   --primary-color-3: #35f3e8;
   --primary-color-4: #ededed;
+  --primary-color-5: #f6f6f6;
   --font-size-small: 16px;
   --font-size-medium: 25px;
   --font-size-large: 55px;
@@ -15,14 +18,34 @@
   --stamp-text: 12px;
 }
 
-* {
+body,
+button,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Inter", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Lora", serif;
+}
+
+* {
   text-decoration: none;
 }
 
 body {
-  min-height: 100vh;
+  height: 100%;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -42,15 +65,23 @@ header {
   box-sizing: border-box;
 }
 
+main {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
 footer {
   background-color: var(--primary-color-4);
+  display: flex;
+  height: auto;
 }
 
 .footer-info {
   padding: 50px;
 
-  max-width: 1500px;
-  height: 10rem;
+  margin: 40px 50px 50px 20px;
 }
 
 .footer-info p {
@@ -59,10 +90,6 @@ footer {
 
 .footer-info .p1 {
   font-weight: 100;
-}
-
-main {
-  margin-top: 5%;
 }
 
 section {
@@ -93,6 +120,12 @@ p {
   font-family: "Inter", sans-serif;
   font-weight: 100;
   font-size: var(--font-size-small);
+}
+
+section h3 {
+  font-size: var(--font-size-medium);
+  padding-left: 55px;
+  margin-bottom: 0px;
 }
 
 .subheading {
@@ -197,17 +230,6 @@ header nav ul li a:hover {
 
 /* buttons */
 
-a:focus,
-button:focus {
-  outline: none;
-}
-
-a:focus-visible,
-button:focus-visible {
-  outline: 2px solid #443ffc;
-  outline-offset: 3px;
-}
-
 .cta-btn {
   width: 200px;
   height: 50px;
@@ -228,10 +250,44 @@ button:focus-visible {
   margin-bottom: 50px;
 }
 
+#load-more-btn {
+  margin: 70px auto 0px;
+  display: block;
+}
+
 button:hover {
   box-shadow: 10px 10px var(--primary-color-3);
   transform: scale(1);
   cursor: pointer;
+}
+
+a:focus,
+button:focus {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #443ffc;
+  outline-offset: 3px;
+}
+
+.alt:active,
+a:active {
+  color: var(--primary-color-1);
+}
+
+.alt:visited,
+a:visited {
+  color: var(--primary-color-1);
+}
+
+.cta-btn:active {
+  color: var(--primary-color-4);
+}
+
+.cta-btn:visited {
+  color: var(--primary-color-4);
 }
 
 @media screen and (max-width: 950px) {
@@ -277,13 +333,33 @@ button:hover {
   #menu-bar:checked ~ nav {
     display: initial;
   }
-}
 
-@media screen and (max-width: 500px) {
-  .logo {
-    max-width: 35vw;
-  }
-  header {
-    padding: 20px;
+  @media screen and (max-width: 500px) {
+    .logo {
+      max-width: 35vw;
+    }
+
+    h1,
+    .section-heading {
+      font-size: 45px;
+    }
+    a.post-link {
+      font-size: 20px;
+    }
+
+    header {
+      padding: 20px;
+    }
+    section.about_section {
+      padding: 0;
+    }
+
+    section {
+      padding: 0 20px;
+    }
+
+    .intro-container {
+      padding: 40px 20px;
+    }
   }
 }

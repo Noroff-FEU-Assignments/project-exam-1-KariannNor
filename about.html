@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Roadtrippin'USA</title>
+    <title>Roadtrippin'USA | About us</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -29,7 +29,6 @@
       src="https://kit.fontawesome.com/d518c97c1e.js"
       crossorigin="anonymous"
     ></script>
-
     <!-- Hotjar Tracking Code for Roadtrippin' USA -->
     <script>
       (function (h, o, t, j, a, r) {
@@ -46,13 +45,15 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
+    <!-- JS scripts -->
+
   </head>
   <body class="home">
     <a class="skip-to-content sr-only" href="#main">Skip to content</a>
 
     <header class="primary-header flex">
       <div>
-        <a href="#" aria-label="Homepage"
+        <a href="index.html" aria-label="Homepage"
           ><img src="img/logo.svg" alt="Roadtrippin' USA logo" class="logo"
         /></a>
       </div>
@@ -67,52 +68,102 @@
           class="primary-navigation flex underline"
         >
           <li><a href="index.html">Home</a></li>
-
+          <li><a href="about.html" id="active">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
           <li>
             <a href="destinations.html" class="no-underline">Destinations +</a>
             <ul class="subnav">
-              <li><a href="#.html">List of all destinations</a></li>
-              <li><a href="#.html">National Parks</a></li>
-              <li><a href="#.html">Scenic Routes</a></li>
-              <li><a href="#.html">Road trips by State</a></li>
+              <li><a href="destinations.html">List of all destinations</a></li>
+              <li><a href="destinations.html">National Parks</a></li>
+              <li><a href="destinations.html">Scenic Routes</a></li>
+              <li><a href="destinations.html">Road trips by State</a></li>
             </ul>
           </li>
 
           <li>
-            <a href="planning.html" class="no-underline">Planning +</a>
+            <a href="planning.html" class="no-underline">Planning +</a
+            >
             <ul class="subnav">
-              <li><a href="#.html">Packing tips</a></li>
-              <li><a href="#.html">Budgeting</a></li>
-              <li><a href="#.html">Travel with kids and pets</a></li>
-              <li><a href="#.html">Route planning</a></li>
-              <li><a href="#.html">Safety</a></li>
-              <li><a href="#.html">Accommodations</a></li>
+              <li><a href="planning.html">Packing tips</a></li>
+              <li><a href="planning.html">Budgeting</a></li>
+              <li><a href="planning.html">Travel with kids and pets</a></li>
+              <li><a href="planning.html">Route planning</a></li>
+              <li><a href="planning.html">Safety</a></li>
+              <li><a href="planning.html">Accommodations</a></li>
             </ul>
           </li>
-
-          <li><a href="about.html" id="active">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main id="main">
-      <!-- spinner for page loading -->
-      <div class="loader">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
+      <!-- about -->
+      <section class="about_section">
+        <div class="contact"> 
+          <div class="contact_text">
+            <h1 class="contact_title">
+              This is our team of travelling roadtrippers
+            </h1>
+            <p class="p1">
+              Our unique content covers the wonderful “off the beaten path” places
+              to visit and our unique database contains the most interesting
+              locations in the United States. Roadtrippin’ USA helps people
+              discover this beautiful country with engaging articles that gives
+              you an idea about what to do and what to plan for.
+            </p>
+          </div>
+         
+        </div>
 
-      <h1 id="article-title"></h1>
-      <img src="" id="article-image" alt="" />
-      <div id="article-excerpt"></div>
+        <div class="cards">
+            <div class="card-img">
+              <img src="/img/annie_300x300.jpg" alt="This is Annie Allen" class="thumb-img"/></a>
+                <div class="card">  
+                <h2>Annie Allen</h2>
+                <p class="p1">As a photojournalist with a passion for outdoor adventure, she loves yoga, hiking and running with the wolves in the wild Southwest. What’s at the crossroads of art and reality? One of Natalie’s beautiful travel photographs.</p>
+                </div>
+            </div>
+            <div class="card-img">
+              <img src="/img/beth_300x300.jpg" alt="This is Beth Jennings" class="thumb-img"/></a>
+                <div class="card">  
+                <h2>Beth Jennings</h2>
+                <p class="p1">Beth is a freelance photographer located in the depths of the Rocky Mountains. Growing up in Idaho and Wyoming, she has an immense admiration for the West and the people that inhabit the landscape. Her work centers around telling the stories where humans and nature intersect.</p>
+                </div>
+            </div>
+
+            <div class="card-img">
+              <img src="/img/rick_300x300.jpg" alt="This is Rick McGregor" class="thumb-img"/></a>
+                <div class="card">  
+                <h2>Rick McGregor</h2>
+                <p class="p1">Rick lives in Southern California with his wife, three kids, dog, turtle and fish. He co-owns a photography and styling company called Dulcet Creative, and loves working alongside brands to bring their products and visions to life through images. He loves to travel, fix up his home, and explore.</p>
+                </div>
+            </div>
+
+            <div class="card-img">
+              <img src="/img/cory_300x300.jpg" alt="This is Cory Parks" class="thumb-img"/></a>
+                <div class="card">  
+                <h2>Cory Parks</h2>
+                <p class="p1">Cory Parks is a Bay Area writer specializing in stories about travel, history, and food. His work has appeared in Smithsonian Magazine, NPR, Atlas Obscura, Fodor’s Travel, and elsewhere.</p>
+                </div>
+            </div>
+       </div>
+
+      </section>
     </main>
 
     <footer>
-      <!-- Footer content goes here -->
+      <div class="footer-info">
+        <p class="h3">Roadtrippin' USA</p>
+        <p class="p1">
+          1002 Demo Ln.<br />
+          12345 Virginia Beach<br />
+          Virginia - USA
+        </p>
+        <p class="p1">
+          &copy; 2023 Kariann Norheim // Roadtrippin' USA. All rights reserved.
+        </p>
+      </div>
+
     </footer>
   </body>
 </html>

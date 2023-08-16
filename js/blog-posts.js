@@ -14,7 +14,7 @@ async function displayBlogPosts() {
     postContainer.classList.add('post');
 
     const postTitleLink = document.createElement('a');
-    postTitleLink.href = 'article.html';
+    postTitleLink.href = `article.html?post_id=${post.id}`;
     postTitleLink.target = '_self'; 
     postTitleLink.classList.add('post-link'); 
     postTitleLink.textContent = post.title.rendered; 

@@ -1,24 +1,15 @@
+
+
 const slideWidth = 205;
-let currentPage = 1;
 
 function slideLeft() {
   const slider = document.getElementById('slider');
   slider.scrollLeft -= slideWidth;
-
-  currentPage--;
-  if (currentPage < 1) {
-    currentPage = 1;
-  }
-
-  fetchAndDisplayBlogPosts(currentPage);
 }
 
 function slideRight() {
   const slider = document.getElementById('slider');
   slider.scrollLeft += slideWidth;
-
-  currentPage++;
-  fetchAndDisplayBlogPosts(currentPage);
 }
 
 function goToSlide(thumbnail) {
@@ -31,19 +22,17 @@ document.getElementById('slide-left').addEventListener('click', slideLeft);
 document.getElementById('slide-right').addEventListener('click', slideRight);
 
 document.addEventListener('DOMContentLoaded', function () {
-  fetchAndDisplayBlogPosts(currentPage);
+  fetchAndDisplayBlogPosts();
 });
 
-async function fetchAndDisplayBlogPosts(page) {
-  const perPage = 3;
-  const apiUrl = `https://knorheim.no/roadtrippin-api/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${page}`;
+async function fetchAndDisplayBlogPosts() {
+  const apiUrl = 'https://knorheim.no/roadtrippin-api/wp-json/wp/v2/posts?_embed&per_page=3';
 
   try {
     const response = await fetch(apiUrl);
     const data = await response.json();
 
     const slider = document.getElementById('slider');
-    slider.innerHTML = ''; 
 
     data.forEach(post => {
       const thumbnail = document.createElement('div');
@@ -75,3 +64,4 @@ async function fetchAndDisplayBlogPosts(page) {
     console.error('Error fetching blog posts:', error);
   }
 }
+

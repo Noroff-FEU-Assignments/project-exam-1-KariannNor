@@ -1,0 +1,70 @@
+.about_section {
+  display: block;
+}
+
+.contact {
+  padding: 50px 50px 10px 50px;
+  max-width: 53vw;
+}
+
+.about-img,
+.team-img {
+  display: grid;
+  grid-area: pic;
+  max-width: 35vw;
+  padding-top: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: "card card card card";
+  grid-gap: 2rem;
+  padding: 50px;
+}
+
+@media only screen and (max-width: 1510px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "card" "card" "card";
+    grid-gap: 2rem;
+    padding: 36px;
+    max-width: 20%;
+  }
+}
+
+@media only screen and (max-width: 1225px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "card" "card";
+    grid-gap: 2rem;
+    padding: 36px;
+    max-width: 20%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "card";
+    grid-gap: 2rem;
+    padding: 36px;
+    max-width: 20%;
+  }
+
+  .contact {
+    padding: 50px 20px 10px 20px;
+    max-width: 80vw;
+  }
+}
+
+
+
+@media screen and (max-width: 500px) {
+  .cards {
+    padding: 20px;
+  }
+}

@@ -1,0 +1,63 @@
+.contact_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "text input";
+  grid-gap: 10rem;
+  padding: 50px;
+  margin: 20px 20px;
+}
+
+.contact_text {
+  grid-area: text;
+  /* max-width: 400px; */
+}
+
+.wrapper {
+  grid-area: input;
+  margin-top: 30px;
+  /* max-width: 400px; */
+}
+
+#messageSent {
+  font-size: 20px;
+  color: rgb(0, 155, 49);
+  text-decoration: underline;
+  margin: 0px 0px 20px 0px;
+}
+
+.form-error {
+  display: none;
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 2px;
+  font-size: 10px;
+}
+
+.form_style {
+  display: block;
+  margin: 5px 0;
+  width: 100%;
+  min-height: 45px;
+  border: solid 2px var(--primary-color-3);
+  background-color: var(--primary-color-5);
+}
+
+.fields {
+  margin-bottom: 25px;
+}
+
+.submit {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 950px) {
+  .contact_section {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas: "text" "input";
+    grid-gap: 5px;
+
+    margin-top: 20px;
+    padding: 20px;
+    max-width: 80%;
+  }
+}

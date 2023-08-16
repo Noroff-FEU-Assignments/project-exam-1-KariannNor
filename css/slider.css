@@ -83,3 +83,52 @@
 .latest-posts .thumbnail:hover {
   transform: scale(1);
 }
+
+@media only screen and (width >= 520px) {
+  #slider {
+    margin: 20px 0px;
+    max-width: 400px;
+  }
+
+  .slide-container {
+    margin: 0 5px;
+    padding: 0;
+    max-width: 470px;
+  }
+
+  #section h3 {
+    margin-bottom: 0px;
+  }
+}
+
+@media only screen and (width < 520px) {
+  #slider {
+    margin: 20px 0px;
+    max-width: 265px;
+  }
+
+  .slide-container {
+    margin: 0 5px;
+    max-width: 300px;
+  }
+}
+
+@media only screen and (width > 700px) {
+  #slider {
+    max-width: 550px;
+  }
+
+  .slide-container {
+    max-width: 600px;
+  }
+}
+
+@media only screen and (width > 1000px) {
+  #slider {
+    max-width: 700px;
+  }
+
+  .slide-container {
+    max-width: 800px;
+  }
+}
