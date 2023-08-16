@@ -363,3 +363,10 @@ a:visited {
     }
   }
 }
+
+@media screen and (max-width: 723px) {
+  h1,
+  .section-heading {
+    font-size: 35px;
+  }
+}
