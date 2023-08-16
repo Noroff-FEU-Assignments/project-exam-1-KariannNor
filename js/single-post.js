@@ -31,7 +31,8 @@ async function fetchAndDisplayArticle() {
 
     if (data._embedded && data._embedded['wp:featuredmedia']) {
       document.getElementById('article-image').src = data._embedded['wp:featuredmedia'][0].source_url;
-      document.getElementById('article-image').alt = data.title.rendered;
+      document.getElementById('article-image').alt = data._embedded['wp:featuredmedia'][0].alt_text;
+     
     }
 
     if (data.excerpt) {
