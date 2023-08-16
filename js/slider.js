@@ -57,7 +57,7 @@ async function fetchAndDisplayBlogPosts(page) {
       thumbnail.appendChild(thumbnailImg);
 
       const thumbnailLink = document.createElement('a');
-      thumbnailLink.href = '#';
+      thumbnailLink.href = `article.html?post_id=${post.id}`;
 
       const thumbnailCaption = document.createElement('p');
       thumbnailCaption.classList.add('title-thumb');
@@ -67,6 +67,12 @@ async function fetchAndDisplayBlogPosts(page) {
       thumbnail.appendChild(thumbnailLink);
 
       thumbnail.addEventListener('click', () => goToSlide(thumbnail));
+
+      thumbnailCaption.addEventListener('click', () => {
+        const titleThumbnail = thumbnail; 
+        goToSlide(titleThumbnail);
+      });
+      
 
       slider.appendChild(thumbnail);
     });
