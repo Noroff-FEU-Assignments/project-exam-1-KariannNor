@@ -25,15 +25,19 @@
 
 .title-thumb {
   font-family: "Lora", serif;
-  font-weight: 300;
-  font-size: var(--font-size-small);
+  font-weight: 100;
+  font-size: var(--font-size-medium);
   text-decoration: none;
   color: var(--primary-color-1);
   position: relative;
   margin-top: -5px;
 }
 
-.title-thumb::after {
+.title-thumb:hover {
+  text-decoration: underline;
+}
+
+/* .title-thumb::after {
   content: "";
   position: absolute;
   left: 0;
@@ -44,7 +48,7 @@
 
 .title-thumb:hover::after {
   border-bottom-color: var(--primary-color-3);
-}
+} */
 
 .latest-posts {
   align-items: center;
