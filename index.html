@@ -46,7 +46,6 @@
     <script type="module" src="js/blog-posts.js" defer></script>
     <script type="module" src="js/slider.js" defer></script>
     <script type="module" src="js/blog-posts-eight.js" defer></script>
-    <script type="module" src="js/display-all.js" defer></script>
     <script type="module" src="js/loader.js" defer></script>
   </head>
   <body class="home">
@@ -82,16 +81,18 @@
     </header>
 
     <main id="main">
-      <!-- Intro -->
-      <div aria-labelledby="intro" class="intro-container">
-        <div class="wrapper-intro">
-          <h1 class="subheading">Roaming the American Tapestry:</h1>
-          <h2 class="section-heading">
-            A travel blog about epic road trips around the USA
-          </h2>
-          <button class="cta-btn" onclick="location.href='destinations.html'">Read all about it!</button>
+
+      <!-- feature article 1 -->
+      <div aria-labelledby="feature-article" class="feature-container">
+        <div class="feature-img">
+          <img src="/img/horseshoebend_2000x1000.jpg" alt="Travel to Horseshoe Bend" class="feature"/></a>
+        </div>
+        <div class="feature-title">
+          <h2 class="section-heading white">Horseshoe Bend and the Grand Canyon</h2>
+          <button class="cta-btn alt" onclick="location.href='article.html?post_id=113'">Read all about it!</button>
         </div>
       </div>
+
 
       <!-- spinner for page loading -->
       <div class="loader">
@@ -110,17 +111,6 @@
       </section>
       
 
-      <!-- feature article 1 -->
-      <div aria-labelledby="feature-article" class="feature-container">
-        <div class="feature-img">
-          <img src="/img/horseshoebend_2000x1000.jpg" alt="Travel to Horseshoe Bend" class="feature"/></a>
-        </div>
-        <div class="feature-title">
-          <h2 class="section-heading white">Horseshoe Bend and the Grand Canyon</h2>
-          <button class="cta-btn alt" onclick="location.href='article.html?post_id=113'">Read all about it!</button>
-        </div>
-      </div>
-
       <!-- Section - carousel -->
       <section aria-labelledby="slider">
         <h3>Our latest posts</h3>
@@ -130,6 +120,18 @@
           <i class="fa-solid fa-circle-chevron-right" id="slide-right"></i>
         </div>
       </section>
+
+
+       <!-- Intro -->
+      <div aria-labelledby="intro" class="intro-container">
+        <div class="wrapper-intro">
+          <h1 class="subheading">Roaming the American Tapestry:</h1>
+          <h2 class="section-heading">
+            A travel blog about epic road trips around the USA
+          </h2>
+          <button class="cta-btn" onclick="location.href='destinations.html'">Read all about it!</button>
+        </div>
+      </div>
 
          <!-- Section blog-post 2 - api-fetch -->
       <section aria-labelledby="blog-post-section2">

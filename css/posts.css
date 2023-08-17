@@ -143,10 +143,10 @@ a.post-link:hover::after {
   .feature-container {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "right" "left";
+    grid-template-areas: "left" "right";
     gap: 1rem;
     grid-template-rows: 1fr 1fr;
-    max-height: 600px;
+    max-height: 650px;
   }
   .feature {
     width: 100%;
@@ -168,5 +168,11 @@ a.post-link:hover::after {
   #article-content {
     font-size: 17px;
     line-height: 2rem;
+  }
+}
+
+@media only screen and (width <= 723px) {
+  .feature-title h2 {
+    font-size: 45px;
   }
 }

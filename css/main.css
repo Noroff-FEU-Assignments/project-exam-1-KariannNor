@@ -144,6 +144,7 @@ section h3 {
 
 .white {
   color: var(--primary-color-4);
+  line-height: 4rem;
 }
 
 .sr-only {
@@ -368,9 +369,30 @@ a:visited {
   }
 }
 
-@media screen and (max-width: 723px) {
+@media screen and (width < 950px) {
   h1,
   .section-heading {
     font-size: 35px;
+  }
+
+  .white {
+    line-height: 3rem;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (width >= 950px) {
+  .white {
+    padding: auto;
+  }
+
+  .feature-container {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (width >= 2000px) {
+  .feature-container {
+    margin-top: -2px;
   }
 }
