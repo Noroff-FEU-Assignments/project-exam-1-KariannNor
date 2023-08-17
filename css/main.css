@@ -184,6 +184,10 @@ label .fa-bars {
   display: none;
 }
 
+#active {
+  font-weight: 600;
+}
+
 header nav ul {
   list-style: none;
 }
