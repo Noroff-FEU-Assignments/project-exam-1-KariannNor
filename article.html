@@ -48,8 +48,9 @@
     </script>
 
     <!-- JS scripts -->
-    <script type="module" src="js/slider.js" defer></script>
     <script type="module" src="js/single-post.js" defer></script>
+    <script type="module" src="js/loader.js" defer></script>
+    <script type="module" src="js/slider.js" defer></script>
   </head>
   <body class="home">
     <a class="skip-to-content sr-only" href="#main">Skip to content</a>
@@ -72,10 +73,12 @@
         >
           <li><a href="index.html">Home</a></li>
           <li>
-            <a href="destinations.html" class="no-underline">Blog</a>
+            <a href="destinations.html" class="no-underline" id="active"
+              >Blog</a
+            >
             <ul class="subnav">
               <li><a href="destinations.html">Latest posts</a></li>
-              <li><a href="destinations.html">Popular posts</a></li>
+              <li><a href="popularposts.html">Popular posts</a></li>
             </ul>
           </li>
           <li><a href="about.html">About us</a></li>
@@ -86,13 +89,13 @@
 
     <main id="main">
       <!-- spinner for page loading -->
-      <!-- <div class="loader">
+      <div class="loader">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
-      </div> -->
+      </div>
       <!-- js content in here -->
 
       <section class="article">
