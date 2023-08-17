@@ -9,6 +9,7 @@
 
 .contact_text {
   grid-area: text;
+  margin-top: 50px;
   /* max-width: 400px; */
 }
 

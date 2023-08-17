@@ -148,7 +148,6 @@ a.post-link:hover::after {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: "left" "right";
-    gap: 1rem;
     grid-template-rows: 1fr 1fr;
     max-height: 650px;
     margin-top: 50px;
@@ -158,7 +157,9 @@ a.post-link:hover::after {
   }
 
   .feature-title {
-    padding: 20px 50px 50px 50px;
+    padding: 1rem;
+    margin: -50px 20px 10px 20px;
+  }
   }
 
   #article-excerpt.quote {
@@ -174,7 +175,7 @@ a.post-link:hover::after {
     font-size: 17px;
     line-height: 2rem;
   }
-}
+
 
 @media only screen and (width <= 723px) {
   .feature-title h2 {
