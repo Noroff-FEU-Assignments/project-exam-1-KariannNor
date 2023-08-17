@@ -139,6 +139,10 @@ a.post-link:hover::after {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
+.article {
+  margin-top: 50px;
+}
+
 @media only screen and (max-width: 723px) {
   .feature-container {
     display: grid;
@@ -147,6 +151,7 @@ a.post-link:hover::after {
     gap: 1rem;
     grid-template-rows: 1fr 1fr;
     max-height: 650px;
+    margin-top: 50px;
   }
   .feature {
     width: 100%;
