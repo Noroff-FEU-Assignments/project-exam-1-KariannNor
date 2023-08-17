@@ -145,6 +145,8 @@ a.post-link:hover::after {
     grid-template-columns: 1fr;
     grid-template-areas: "right" "left";
     gap: 1rem;
+    grid-template-rows: 1fr 1fr;
+    max-height: 600px;
   }
   .feature {
     width: 100%;
