@@ -6,6 +6,7 @@
 }
 
 .slide-container {
+  position: relative;
   max-width: 1000px;
   display: flex;
   justify-content: center;
@@ -15,6 +16,7 @@
 
 #slider {
   margin: 20px 10px;
+  position: relative;
 }
 
 .img-thumb {
@@ -96,6 +98,12 @@
 
   .slide-container {
     margin: 5px auto;
+  }
+}
+
+@media only screen and (width < 520px) {
+  .title-thumb {
+    font-size: var(--font-size-small);
   }
 }
 

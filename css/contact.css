@@ -9,7 +9,6 @@
 
 .contact_text {
   grid-area: text;
-  margin-top: 50px;
   /* max-width: 400px; */
 }
 
@@ -56,9 +55,12 @@
     grid-template-columns: repeat(1, 1fr);
     grid-template-areas: "text" "input";
     grid-gap: 5px;
-
     margin-top: 20px;
-    padding: 20px;
+    padding: 20px 50px 20px 50px;
     max-width: 80%;
+  }
+
+  .contact_text {
+    margin-top: 50px;
   }
 }

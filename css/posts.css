@@ -57,7 +57,7 @@ a.post-link:hover::after {
 }
 
 .intro-container {
-  padding: 40px 50px;
+  padding: 0px 50px;
   background-color: var(--primary-color-2);
 }
 
@@ -160,22 +160,21 @@ a.post-link:hover::after {
     padding: 1rem;
     margin: -50px 20px 10px 20px;
   }
-  }
+}
 
-  #article-excerpt.quote {
-    padding: 25px 10px 35px 10px;
-    font-size: 20px;
-    line-height: 2rem;
-  }
+#article-excerpt.quote {
+  padding: 25px 10px 35px 10px;
+  font-size: 20px;
+  line-height: 2rem;
+}
 
-  .contact.wide {
-    padding: 20px;
-  }
-  #article-content {
-    font-size: 17px;
-    line-height: 2rem;
-  }
-
+.contact.wide {
+  padding: 20px;
+}
+#article-content {
+  font-size: 17px;
+  line-height: 2rem;
+}
 
 @media only screen and (width <= 723px) {
   .feature-title h2 {
