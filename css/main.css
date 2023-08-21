@@ -132,7 +132,11 @@ section h3 {
   font-family: "Inter", sans-serif;
   font-size: var(--font-size-small);
   font-weight: 100;
-  margin: 50px 0 -40px 0;
+  margin: 20px 0 -20px 0;
+}
+
+.wrapper-intro h2 {
+  font-size: var(--font-size-medium);
 }
 
 .section-heading {
