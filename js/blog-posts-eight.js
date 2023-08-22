@@ -19,14 +19,20 @@ async function displayNextEightBlogPosts() {
       postTitleLink.classList.add('post-link');
       postTitleLink.textContent = post.title.rendered;
 
-      const postPicture = document.createElement('img');
-      postPicture.src = post._embedded['wp:featuredmedia'][0].source_url;
+      const pictureMedium = document.createElement('img');
+      pictureMedium.src = post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url;
+      pictureMedium.classList.add('picture-medium');
+
+      // const postPicture = document.createElement('img');
+      // postPicture.src = post._embedded['wp:featuredmedia'][0].source_url;
 
       const postExcerpt = document.createElement('div');
       postExcerpt.classList.add('excerpt');
       postExcerpt.textContent = stripPTags(post.excerpt.rendered);
 
-      postContainer.appendChild(postPicture);
+
+      postContainer.appendChild(pictureMedium);
+      // postContainer.appendChild(postPicture);
       postContainer.appendChild(postTitleLink);
       postContainer.appendChild(postExcerpt);
 
