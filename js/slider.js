@@ -55,7 +55,7 @@ async function fetchAndDisplayBlogPosts(page) {
 
         const thumbnailImg = document.createElement('img');
         thumbnailImg.classList.add('img-thumb');
-        thumbnailImg.src = post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url;
+        thumbnailImg.src = post._embedded['wp:featuredmedia'][0].source_url;
         thumbnailImg.alt = post.title.rendered;
 
         thumbnail.appendChild(thumbnailImg);
