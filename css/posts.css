@@ -143,6 +143,18 @@ a.post-link:hover::after {
   margin-top: 50px;
 }
 
+blockquote p {
+  font-weight: 300;
+  margin: 50px 10px;
+  font-family: "Lora", serif !important;
+  font-size: 25px;
+  line-height: 2.5rem;
+}
+
+figure.wp-block-image.size-large {
+  padding-top: 40px;
+}
+
 @media only screen and (max-width: 723px) {
   .feature-container {
     display: grid;
@@ -160,24 +172,29 @@ a.post-link:hover::after {
     padding: 1rem;
     margin: -50px 20px 10px 20px;
   }
-}
 
-#article-excerpt.quote {
-  padding: 25px 10px 35px 10px;
-  font-size: 20px;
-  line-height: 2rem;
-}
+  #article-excerpt.quote {
+    padding: 25px 10px 35px 10px;
+    font-size: 20px;
+    line-height: 2rem;
+  }
 
-.contact.wide {
-  padding: 20px;
-}
-#article-content {
-  font-size: 17px;
-  line-height: 2rem;
+  .contact.wide {
+    padding: 20px;
+  }
+  #article-content {
+    font-size: 17px;
+    line-height: 2rem;
+  }
 }
 
 @media only screen and (width <= 723px) {
   .feature-title h2 {
     font-size: 45px;
+  }
+
+  blockquote p {
+    margin: 50px -40px;
+    font-size: 20px;
   }
 }

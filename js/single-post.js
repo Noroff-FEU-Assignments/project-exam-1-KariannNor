@@ -16,8 +16,6 @@ async function fetchAndDisplayArticle() {
 
   const apiUrl = `https://knorheim.no/roadtrippin-api/wp-json/wp/v2/posts/${postId}?_embed`;
 
- 
-
   try {
     const response = await fetch(apiUrl);
     if (!response.ok) {
@@ -25,21 +23,43 @@ async function fetchAndDisplayArticle() {
     }
     const data = await response.json();
 
-    document.getElementById('article-title').textContent = data.title.rendered;
+    const articleTitle = document.getElementById('article-title');
+    articleTitle.textContent = data.title.rendered;
+    articleTitle.setAttribute('aria-label', `Article Title: ${data.title.rendered}`);
     document.title = `Roadtrippin | ${data.title.rendered}`;
 
-
     if (data._embedded && data._embedded['wp:featuredmedia']) {
-      document.getElementById('article-image').src = data._embedded['wp:featuredmedia'][0].source_url;
-      document.getElementById('article-image').alt = data._embedded['wp:featuredmedia'][0].alt_text;
-     
+      const articleImage = document.getElementById('article-image');
+      articleImage.src = data._embedded['wp:featuredmedia'][0].source_url;
+      articleImage.alt = data._embedded['wp:featuredmedia'][0].alt_text;
+      articleImage.setAttribute('aria-label', 'Article Image');
     }
 
-    if (data.excerpt) {
-      document.getElementById('article-excerpt').innerHTML = stripPTags(data.excerpt.rendered);
-    }
+
     if (data.content) {
-      document.getElementById('article-content').innerHTML = stripPTags(data.content.rendered);
+      const articleContent = document.getElementById('article-content');
+      articleContent.innerHTML = data.content.rendered;
+      articleContent.setAttribute('aria-label', 'Article Content');
+
+      const { h2, h3, paragraphs } = extractContent(data.content.rendered);
+      
+      if (h2) {
+        const h2Element = document.createElement('h2');
+        h2Element.textContent = h2;
+        articleContent.appendChild(h2Element);
+      }
+
+      if (h3) {
+        const h3Element = document.createElement('h3');
+        h3Element.textContent = h3;
+        articleContent.appendChild(h3Element);
+      }
+
+      paragraphs.forEach(paragraphText => {
+        const paragraphElement = document.createElement('p');
+        paragraphElement.textContent = paragraphText;
+        articleContent.appendChild(paragraphElement);
+      });
     }
 
   } catch (error) {

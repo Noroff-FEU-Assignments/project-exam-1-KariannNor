@@ -83,9 +83,11 @@
 
     <main id="main">
       <!-- contact form -->
-      <section class="contact_section">
+      <section class="contact_section" aria-labelledby="contact">
         <div class="contact_text">
-          <h1 class="contact_title">We would love to hear from you!</h1>
+          <h1 class="contact_title" id="contact">
+            We would love to hear from you!
+          </h1>
           <p class="p1">
             Do you have any ideas or inquiries - let us hear them. <br />
             We are always looking for inspiration for new trips and adventures.
@@ -100,37 +102,55 @@
             <div class="messageContainer" id="messageSent"></div>
             <p class="p1 fields">All fields required</p>
 
-            <label for="name" class="p1">Full name</label>
-            <input type="text" name="name" id="name" class="form_style" />
+            <label id="nameLabel" for="name" class="p1">Full name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              class="form_style"
+              aria-labelledby="nameLabel"
+              aria-required="true"
+            />
             <div class="form-error" id="nameError">
               <p class="p3">Please enter your full name</p>
             </div>
 
-            <label for="email" class="p1">E-mail</label>
-            <input type="email" name="email" id="email" class="form_style" />
+            <label id="emailLabel" for="email" class="p1">E-mail</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="form_style"
+              aria-labelledby="emailLabel"
+              aria-required="true"
+            />
             <div class="form-error" id="emailError">
               <p class="p3">Please enter your email</p>
             </div>
 
-            <label for="subject" class="p1">Subject</label>
+            <label id="subjectLabel" for="subject" class="p1">Subject</label>
             <textarea
               name="subject"
               rows="1"
               cols="10"
               id="subject"
               class="form_style"
+              aria-labelledby="subjectLabel"
+              aria-required="true"
             ></textarea>
             <div class="form-error" id="subjectError">
               <p class="p3">Your subject must be more than 15 characters</p>
             </div>
 
-            <label for="message" class="p1">Message</label>
+            <label id="messageLabel" for="message" class="p1">Message</label>
             <textarea
               name="message"
               rows="5"
               cols="30"
               id="message"
               class="form_style"
+              aria-labelledby="messageLabel"
+              aria-required="true"
             ></textarea>
             <div class="form-error" id="messageError">
               <p class="p3">Your message must be at least 25 characters</p>
@@ -143,7 +163,7 @@
     </main>
 
     <footer>
-      <div class="footer-info">
+      <div class="footer-info" aria-label="Footer information">
         <p class="h3">Roadtrippin' USA</p>
         <p class="p1">
           1002 Demo Ln.<br />

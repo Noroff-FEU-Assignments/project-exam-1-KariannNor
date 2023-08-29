@@ -83,12 +83,12 @@
     <main id="main">
 
       <!-- feature article 1 -->
-      <div aria-labelledby="feature-article" class="feature-container">
+      <div aria-labelledby="feature-article-intro" class="feature-container">
         <div class="feature-img">
           <img src="/img/horseshoebend_2000x1000.jpg" alt="Travel to Horseshoe Bend" class="feature"/></a>
         </div>
         <div class="feature-title">
-          <h2 class="section-heading white">Horseshoe Bend and the Grand Canyon</h2>
+          <h2 class="section-heading white" id="feature-article-intro">Horseshoe Bend and the Grand Canyon</h2>
           <button class="cta-btn alt" onclick="location.href='article.html?post_id=113'">Read all about it!</button>
         </div>
       </div>
@@ -97,10 +97,10 @@
       <div aria-labelledby="intro" class="intro-container">
         <div class="wrapper-intro">
           <h1 class="subheading">Roaming the American Tapestry:</h1>
-          <h2 class="section-heading">
+          <h2 class="section-heading" id="intro">
             A travel blog about epic road trips around the USA
           </h2>
-          <!-- <button class="cta-btn" onclick="location.href='destinations.html'">Read all about it!</button> -->
+  
         </div>
       </div>
 
@@ -114,7 +114,7 @@
       </div>
 
       <!-- Section blog-post 1 - api-fetch -->
-      <section aria-labelledby="blog-post-section1">
+      <section aria-label="Popular Posts">
         <h2 class="section-heading">Popular Posts</h2>
     
         <div class="blog-posts-container"></div>
@@ -123,8 +123,8 @@
 
 
       <!-- Section - carousel -->
-      <section aria-labelledby="slider">
-        <h3>Our latest posts</h3>
+      <section aria-label="Latest Posts">
+        <h3 >Our latest posts</h3>
         <div class="slide-container">
           <i class="fa-solid fa-circle-chevron-left" id="slide-left"></i>
             <div class="latest-posts" id="slider"></div>
@@ -135,24 +135,24 @@
 
          <!-- Section blog-post 2 - api-fetch -->
       <section aria-labelledby="blog-post-section2">
-        <h2 class="section-heading">Discover our latest trips</h2>
+        <h2 class="section-heading" id="blog-post-section2">Discover our latest trips</h2>
         <div class="blog-posts-eight"></div>
       </section>
 
 
        <!-- feature article 2 -->
-      <div aria-labelledby="feature-article" class="feature-container">
+      <div aria-labelledby="feature-article-last" class="feature-container">
         <div class="feature-img">
           <img src="/img/tent_view_2000x1000.jpg" alt="Camping under the stars" class="feature"/></a>
         </div>
         <div class="feature-title">
-          <h2 class="section-heading white">Bondocking in The Blue Ridge</h2>
+          <h2 class="section-heading white" id="feature-article-last">Bondocking in The Blue Ridge</h2>
           <button class="cta-btn alt" onclick="location.href='article.html?post_id=113'">Read all about it!</button>
         </div>
       </div>
     </main>
 
-    <footer>
+    <footer aria-label="Footer information">
       <div class="footer-info">
         <p class="h3">Roadtrippin' USA</p>
         <p class="p1">1002 Demo Ln.<br>
