@@ -4,6 +4,17 @@ function stripPTags(html) {
   return tempDiv.textContent || tempDiv.innerText || '';
 }
 
+function extractContent(htmlString) {
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlString, 'text/html');
+  const h2 = doc.querySelector('h2') ? doc.querySelector('h2').textContent : null;
+  const h3 = doc.querySelector('h3') ? doc.querySelector('h3').textContent : null;
+
+  const paragraphNodes = doc.querySelectorAll('p');
+  const paragraphs = Array.from(paragraphNodes).map(node => node.textContent);
+
+  return { h2, h3, paragraphs };
+}
 
 async function fetchAndDisplayArticle() {
   const params = new URLSearchParams(window.location.search);
@@ -22,6 +33,7 @@ async function fetchAndDisplayArticle() {
       throw new Error('Error fetching article');
     }
     const data = await response.json();
+
 
     const articleTitle = document.getElementById('article-title');
     articleTitle.textContent = data.title.rendered;
