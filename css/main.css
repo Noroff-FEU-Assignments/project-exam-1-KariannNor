@@ -304,36 +304,31 @@ a:visited {
   color: var(--primary-color-4);
 }
 
-@media screen and (max-width: 500px) {
-  .logo {
-    max-width: 35vw;
+@media screen and (width >= 2000px) {
+  .feature-container {
+    margin-top: -2px;
   }
+}
 
+@media screen and (width < 950px) {
   h1,
   .section-heading {
-    font-size: 45px;
-  }
-  a.post-link {
-    font-size: 20px;
+    font-size: 35px;
   }
 
-  header {
-    padding: 20px;
+  .white {
+    line-height: 3rem;
+    padding-right: 30px;
   }
-  section.about_section {
-    padding: 0;
+}
+
+@media screen and (width >= 950px) {
+  .white {
+    padding: auto;
   }
 
-  section {
-    padding: 0 20px;
-  }
-
-  .subheading {
-    margin: 0px 0 -10px 0;
-  }
-
-  .intro-container {
-    padding: 20px 20px;
+  .feature-container {
+    margin-top: 20px;
   }
 }
 
@@ -382,30 +377,35 @@ a:visited {
   }
 }
 
-@media screen and (width < 950px) {
+@media screen and (max-width: 500px) {
+  .logo {
+    max-width: 35vw;
+  }
+
   h1,
   .section-heading {
-    font-size: 35px;
+    font-size: 45px;
+  }
+  a.post-link {
+    font-size: 20px;
   }
 
-  .white {
-    line-height: 3rem;
-    padding-right: 30px;
+  header {
+    padding: 20px;
   }
-}
-
-@media screen and (width >= 950px) {
-  .white {
-    padding: auto;
+  section.about_section {
+    padding: 0;
   }
 
-  .feature-container {
-    margin-top: 20px;
+  section {
+    padding: 0 20px;
   }
-}
 
-@media screen and (width >= 2000px) {
-  .feature-container {
-    margin-top: -2px;
+  .subheading {
+    margin: 0px 0 -10px 0;
+  }
+
+  .intro-container {
+    padding: 20px 20px;
   }
 }
