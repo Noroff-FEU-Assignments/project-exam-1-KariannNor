@@ -4,17 +4,16 @@ function stripPTags(html) {
   return tempDiv.textContent || tempDiv.innerText || '';
 }
 
-function extractContent(htmlString) {
-  const parser = new DOMParser();
-  const doc = parser.parseFromString(htmlString, 'text/html');
-  const h2 = doc.querySelector('h2') ? doc.querySelector('h2').textContent : null;
-  const h3 = doc.querySelector('h3') ? doc.querySelector('h3').textContent : null;
+// function pullContent(htmlString) {
+//   const parser = new DOMParser();
+//   const doc = parser.parseFromString(htmlString, 'text/html');
+//   const h2 = doc.querySelector('h2') ? doc.querySelector('h2').textContent : null;
+//   const h3 = doc.querySelector('h3') ? doc.querySelector('h3').textContent : null;
+//   const paragraphs = Array.from(doc.querySelectorAll('p')).map(p => p.textContent);
 
-  const paragraphNodes = doc.querySelectorAll('p');
-  const paragraphs = Array.from(paragraphNodes).map(node => node.textContent);
+//   return { h2, h3, paragraphs };
+// }
 
-  return { h2, h3, paragraphs };
-}
 
 async function fetchAndDisplayArticle() {
   const params = new URLSearchParams(window.location.search);
@@ -34,7 +33,6 @@ async function fetchAndDisplayArticle() {
     }
     const data = await response.json();
 
-
     const articleTitle = document.getElementById('article-title');
     articleTitle.textContent = data.title.rendered;
     articleTitle.setAttribute('aria-label', `Article Title: ${data.title.rendered}`);
@@ -53,7 +51,8 @@ async function fetchAndDisplayArticle() {
       articleContent.innerHTML = data.content.rendered;
       articleContent.setAttribute('aria-label', 'Article Content');
 
-      const { h2, h3, paragraphs } = extractContent(data.content.rendered);
+  
+      const { h2, h3, paragraphs } = pullContent(data.content.rendered);
       
       if (h2) {
         const h2Element = document.createElement('h2');
