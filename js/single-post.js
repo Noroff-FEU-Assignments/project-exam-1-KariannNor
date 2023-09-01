@@ -45,32 +45,10 @@ async function fetchAndDisplayArticle() {
       articleImage.setAttribute('aria-label', 'Article Image');
     }
 
-
     if (data.content) {
       const articleContent = document.getElementById('article-content');
       articleContent.innerHTML = data.content.rendered;
       articleContent.setAttribute('aria-label', 'Article Content');
-
-  
-      const { h2, h3, paragraphs } = pullContent(data.content.rendered);
-      
-      if (h2) {
-        const h2Element = document.createElement('h2');
-        h2Element.textContent = h2;
-        articleContent.appendChild(h2Element);
-      }
-
-      if (h3) {
-        const h3Element = document.createElement('h3');
-        h3Element.textContent = h3;
-        articleContent.appendChild(h3Element);
-      }
-
-      paragraphs.forEach(paragraphText => {
-        const paragraphElement = document.createElement('p');
-        paragraphElement.textContent = paragraphText;
-        articleContent.appendChild(paragraphElement);
-      });
     }
 
   } catch (error) {
