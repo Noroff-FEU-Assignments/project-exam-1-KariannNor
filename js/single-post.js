@@ -4,16 +4,6 @@ function stripPTags(html) {
   return tempDiv.textContent || tempDiv.innerText || '';
 }
 
-// function pullContent(htmlString) {
-//   const parser = new DOMParser();
-//   const doc = parser.parseFromString(htmlString, 'text/html');
-//   const h2 = doc.querySelector('h2') ? doc.querySelector('h2').textContent : null;
-//   const h3 = doc.querySelector('h3') ? doc.querySelector('h3').textContent : null;
-//   const paragraphs = Array.from(doc.querySelectorAll('p')).map(p => p.textContent);
-
-//   return { h2, h3, paragraphs };
-// }
-
 
 async function fetchAndDisplayArticle() {
   const params = new URLSearchParams(window.location.search);
