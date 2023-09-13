@@ -39,19 +39,6 @@
   text-decoration: underline;
 }
 
-/* .title-thumb::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 1px;
-  width: 70%;
-  border-bottom: 2px solid var(--primary-color-1);
-}
-
-.title-thumb:hover::after {
-  border-bottom-color: var(--primary-color-3);
-} */
-
 .latest-posts {
   align-items: center;
   display: flex;
