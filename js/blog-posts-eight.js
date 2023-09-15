@@ -23,8 +23,6 @@ async function displayNextEightBlogPosts() {
       pictureMedium.src = post._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url;
       pictureMedium.classList.add('picture-medium');
 
-      // const postPicture = document.createElement('img');
-      // postPicture.src = post._embedded['wp:featuredmedia'][0].source_url;
 
       const postExcerpt = document.createElement('div');
       postExcerpt.classList.add('excerpt');
@@ -32,7 +30,7 @@ async function displayNextEightBlogPosts() {
 
 
       postContainer.appendChild(pictureMedium);
-      // postContainer.appendChild(postPicture);
+
       postContainer.appendChild(postTitleLink);
       postContainer.appendChild(postExcerpt);
 
