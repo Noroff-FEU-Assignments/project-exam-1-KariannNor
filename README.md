@@ -2,8 +2,6 @@
 
 ![image](https://boisterous-panda-3cc5a0.netlify.app/img/horseshoebend_2000x1000.jpg)
 
-## Description
-
 ## Roadtrippn' USA Blog
 
 The primary objective of this project was to apply the skills acquired during the first two years of part-time studies in front-end development. The task was to design, prototype, test, and implement a blog site with various features while utilizing HTML, CSS, and JavaScript, and connecting to the WordPress API as a headless CMS.
